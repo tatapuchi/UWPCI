@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="UWPTest2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPTest2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <StackPanel.Resources>
+                <Flyout x:ConnectionId='2' x:Name="TextFlyout" Placement="Bottom">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel x:ConnectionId='3' Grid.Row="0" Orientation="Horizontal" Tag="5"                           >
+                            <SymbolIcon Symbol="Globe"/>
+                            <SymbolIcon Symbol="Globe"/>
+                            <SymbolIcon Symbol="Globe"/>
+                            <SymbolIcon Symbol="Globe"/>
+                            <SymbolIcon Symbol="Globe"/>
+                        </StackPanel>
+
+                        <StackPanel x:ConnectionId='4' Grid.Row="1" Orientation="Horizontal" Tag="5"                           >
+                            <SymbolIcon Symbol="Globe"/>
+                            <SymbolIcon Symbol="Globe"/>
+                            <SymbolIcon Symbol="Globe"/>
+                            <SymbolIcon Symbol="Globe"/>
+                        </StackPanel>
+
+                        <StackPanel x:ConnectionId='5' Grid.Row="2" Orientation="Horizontal" Tag="5"                           >
+                            <SymbolIcon Symbol="Globe"/>
+                            <SymbolIcon Symbol="Globe"/>
+                            <SymbolIcon Symbol="Globe"/>
+                        </StackPanel>
+
+                        <StackPanel x:ConnectionId='6' Grid.Row="3" Orientation="Horizontal" Tag="5"                           >
+                            <SymbolIcon Symbol="Globe"/>
+                            <SymbolIcon Symbol="Globe"/>
+                        </StackPanel>
+
+                        <StackPanel x:ConnectionId='7' Grid.Row="4" Orientation="Horizontal" Tag="5"                           >
+                            <SymbolIcon Symbol="Globe"/>
+                        </StackPanel>
+
+                    </Grid>
+                </Flyout>
+            </StackPanel.Resources>
+            
+            <Button x:ConnectionId='8' Content="Open"                      Width="256" Height="64" ToolTipService.ToolTip="Tap"/>
+            <TextBlock x:ConnectionId='9' Text="Nothing Yet" FontSize="64" x:Name="Result"/>
+            <TextBlock x:ConnectionId='10' Text="Tap on This" FontSize="48" FlyoutBase.AttachedFlyout="{StaticResource TextFlyout}"                          />
+        </StackPanel>
+    </Grid>
+</Page>
+
